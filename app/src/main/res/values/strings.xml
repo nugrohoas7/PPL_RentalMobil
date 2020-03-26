@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Unyu Rental Mobil</string>
+    <string name="action_settings">Setting</string>
+    <string name="action_maps">Maps</string>
+    <string name="action_call">Telp</string>
+    <string name="action_sms">SMS</string>
+    <string name="action_about">About</string>
+    <string name="nm_brg"></string>
+    <string name="harga"></string>
+    <string name="facebook_app_id">2502027776572769</string>
+    <string name="google_mtv_coord_zoom12">geo:37.422114,-122.086744?z=12</string>
+    <string name="hrgCemilan1">7000</string>
+    <string name="hrgCemilan2">4500</string>
+    <string name="hrgCemilan3">1000</string>
+    <string name="hrgCemilan4">24000</string>
+    <string name="hrgCemilan5">15500</string>
+    <string name="hrgCemilan6">8000</string>
+    <string name="desCemilan1">Merupakan salah satu kreasi Indomie yang unik, donat Indomie mampu mencuri hati setiap orang. Bagaimana tidak? Hanya dalam sekali gigitan, kalian akan mendapatkan rasa khas Indomie yang dipadu dengan potongan daging serta lelehan keju mozarella.</string>
+    <string name="desCemilan2">Bukan pisang goreng biasa, banana nugget merupakan pisang goreng kekinian yang sedang eksis di pasaran. Berbahan dasar pisang, camilan viral ini digoreng layaknya nugget pada umumnya.</string>
+    <string name="desCemilan3">Siapa yang tak suka camilan pedas yang satu ini? Renyah, gurih dan pedas menjadi ciri khasnya. Biasanya, makaroni ini terdiri dari beberapa level kepedasan, meski level terpedasnya bisa bikin garuk-garuk kepala.</string>
+    <string name="desCemilan4">Beberapa waktu belakangan makanan dengan bahan baku salted egg atau telur asin semakin mudah ditemukan, seperti nasi ayam telur asin, bakpao telur asin, dan martabak telur asin. Nah, kalau versi cemilannya, ada keripik telur asin. Keripik salted egg memiliki rasa yang cukup unik, yaitu asin, manis serta gurih yang bercampur menjadi satu.</string>
+    <string name="desCemilan5">Cireng atau aci digoreng merupakan salah satu makanan khas Sunda yang terbuat dari tepung kanji atau tapioka. Biasanya, makanan kekinian ini biasa ditemukan di sekolah-sekolah.</string>
+    <string name="desCemilan6">Doyan kebab, namun malas pergi keluar? Kebab goreng bisa menjadi solusinya. Kalian dapat merasakan daging khas turki dibalut dengan tortilla dan sayuran tanpa perlu menginjakkan kaki keluar rumah.</string>
+    <string name="title_activity_menu_awal">MenuAwal</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>
+

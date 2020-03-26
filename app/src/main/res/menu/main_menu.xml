@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item android:id="@+id/miLocation"
+        android:title="@string/action_maps"
+        android:orderInCategory="200"
+        app:showAsAction="never" />
+    <item android:id="@+id/miPhone"
+        android:title="@string/action_call"
+        android:orderInCategory="300"
+        app:showAsAction="never" />
+    <item android:id="@+id/miMessage"
+        android:title="@string/action_sms"
+        android:orderInCategory="400"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/miUpdate"
+        android:orderInCategory="100"
+        android:title="Update"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/miLogOut"
+        android:orderInCategory="500"
+        android:title="Log Out"
+        app:showAsAction="never" />
+</menu>
