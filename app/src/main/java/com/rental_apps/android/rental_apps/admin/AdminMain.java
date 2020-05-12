@@ -49,7 +49,7 @@ public class AdminMain extends NavigationLiveo implements OnItemClickListener {
 //        mHelpLiveo.add(getString(R.string.pesanan_baru), R.drawable.ic_action_email,0);
 //        mHelpLiveo.add(getString(R.string.pesanan_proses), R.drawable.ic_action_email,0);
         mHelpLiveo.add(getString(R.string.pesanan_selesai), R.drawable.ic_action_email,0);
-      //  mHelpLiveo.add(getString(R.string.mobil), R.drawable.ic_nav_transport,0);
+      mHelpLiveo.add(getString(R.string.mobil), R.drawable.ic_nav_transport,0);
 //        mHelpLiveo.add(getString(R.string.user), R.drawable.ic_action_person,0);
 //        mHelpLiveo.add(getString(R.string.admin), R.drawable.ic_action_cc_bcc,0);
 
@@ -88,9 +88,9 @@ public class AdminMain extends NavigationLiveo implements OnItemClickListener {
             case 1:
                 mFragment = AdminListTransaksi.newInstance(mHelpLiveo.get(position).getName());
                 break;
-//            case 2:
-//                mFragment = Cars.newInstance(mHelpLiveo.get(position).getName());
-//                break;
+            case 2:
+                mFragment = AdminListCart.newInstance(mHelpLiveo.get(position).getName());
+                break;
 //            case 3:
 //                mFragment = adminListUser.newInstance(mHelpLiveo.get(position).getName(),"2");
 //                break;

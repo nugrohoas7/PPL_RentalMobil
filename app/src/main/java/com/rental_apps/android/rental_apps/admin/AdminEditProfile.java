@@ -459,12 +459,12 @@ public class AdminEditProfile extends AppCompatActivity implements InitComponent
                 int scale = 1;
                 //if image height is greater than width
                 if (o.outHeight > o.outWidth) {
-                    sc = o.outHeight / 400;
+                    sc = o.outHeight / 800;
                     scale = Math.round(sc);
                 }
                 //if image width is greater than height
                 else {
-                    sc = o.outWidth / 400;
+                    sc = o.outWidth / 800;
                     scale = Math.round(sc);
                 }
 

@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import com.pixplicity.easyprefs.library.Prefs;
 import com.rental_apps.android.rental_apps.SPreferenced.SPref;
+import com.rental_apps.android.rental_apps.admin.AdminMain;
+import com.rental_apps.android.rental_apps.admin.SplashAdminActivity;
 import com.rental_apps.android.rental_apps.api.client;
 import com.rental_apps.android.rental_apps.model.model_user.DataUser;
 import com.rental_apps.android.rental_apps.model.model_user.ResponseLogin;
@@ -140,9 +142,9 @@ public class ActivityLogin extends AppCompatActivity implements InitComponent, V
                         Log.d("data user",userData.toString());
                         setPreference(userData);
                         if (userData.getGroup_user().equals(1))
-                            move.moveActivity(mContext,SplashActivity.class);
+                            move.moveActivity(mContext, SplashAdminActivity.class);
                         else
-                            move.moveActivity(mContext,SplashActivity.class);
+                            move.moveActivity(mContext, SplashActivity.class);
                         finish();
                     }else{
                         Toasty.error(mContext,"Username dan password salah",Toast.LENGTH_LONG).show();
