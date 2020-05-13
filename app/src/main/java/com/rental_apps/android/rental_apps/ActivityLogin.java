@@ -19,6 +19,7 @@ import com.rental_apps.android.rental_apps.api.client;
 import com.rental_apps.android.rental_apps.model.model_user.DataUser;
 import com.rental_apps.android.rental_apps.model.model_user.ResponseLogin;
 import com.rental_apps.android.rental_apps.myinterface.InitComponent;
+import com.rental_apps.android.rental_apps.user.MenuDashboardActivity;
 import com.rental_apps.android.rental_apps.user.SplashActivity;
 import com.rental_apps.android.rental_apps.user.UserMain;
 import com.rental_apps.android.rental_apps.utils.move;
@@ -83,9 +84,11 @@ public class ActivityLogin extends AppCompatActivity implements InitComponent, V
         et_username=(MyEditText)findViewById(R.id.et_username);
         et_password=(MyEditText)findViewById(R.id.et_password);
         btn_login=(MyTextView)findViewById(R.id.btn_login);
+        Typeface custom_fonts2 = Typeface.createFromAsset(getAssets(), "fonts/ArgonPERSONAL-Regular.otf");
+        btn_login.setTypeface(custom_fonts2);
         txt_register=(MyTextView) findViewById(R.id.txt_register);
         TextView logofont = (TextView) findViewById(R.id.logofont);
-        Typeface custom_fonts = Typeface.createFromAsset(getAssets(), "fonts/ArgonPERSONAL-Regular.otf");
+        Typeface custom_fonts = Typeface.createFromAsset(getAssets(), "fonts/Bratt-Graner.otf");
         logofont.setTypeface(custom_fonts);
     }
 

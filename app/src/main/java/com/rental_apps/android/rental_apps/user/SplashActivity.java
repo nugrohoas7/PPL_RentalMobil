@@ -1,16 +1,11 @@
 package com.rental_apps.android.rental_apps.user;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.rental_apps.android.rental_apps.R;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Bundle;
 
 public class SplashActivity extends Activity {
 

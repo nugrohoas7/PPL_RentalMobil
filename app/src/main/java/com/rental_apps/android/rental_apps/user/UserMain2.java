@@ -1,26 +1,21 @@
 package com.rental_apps.android.rental_apps.user;
 
+import android.support.v7.app.AppCompatActivity;
+
 import android.annotation.SuppressLint;
 import android.support.v4.app.Fragment;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
 import com.pixplicity.easyprefs.library.Prefs;
 import com.rental_apps.android.rental_apps.ActivityLogin;
 import com.rental_apps.android.rental_apps.R;
 import com.rental_apps.android.rental_apps.SPreferenced.SPref;
 import com.rental_apps.android.rental_apps.admin.AdminEditProfile;
-import com.rental_apps.android.rental_apps.admin.AdminListCart;
 import com.rental_apps.android.rental_apps.api.client;
-import com.rental_apps.android.rental_apps.myinterface.InitComponent;
 import com.rental_apps.android.rental_apps.utils.move;
 import com.squareup.picasso.Picasso;
 
@@ -28,10 +23,8 @@ import br.liveo.interfaces.OnItemClickListener;
 import br.liveo.interfaces.OnPrepareOptionsMenuLiveo;
 import br.liveo.model.HelpLiveo;
 import br.liveo.navigationliveo.NavigationLiveo;
-import es.dmoral.toasty.Toasty;
 
-
-public class UserMain extends NavigationLiveo implements OnItemClickListener {
+public class UserMain2 extends NavigationLiveo implements OnItemClickListener {
     Context mContext;
     private HelpLiveo mHelpLiveo;
 //    AdminListUser adminListUser;
@@ -62,7 +55,7 @@ public class UserMain extends NavigationLiveo implements OnItemClickListener {
 
 
 
-        with(this).startingPosition(0)
+        with(this).startingPosition(1)
                 .addAllHelpItem(mHelpLiveo.getHelp())
                 .selectorCheck(R.color.nliveo_red_alpha_colorPrimaryDark)
                 .colorItemDefault(R.color.white)
@@ -89,7 +82,6 @@ public class UserMain extends NavigationLiveo implements OnItemClickListener {
     public void onItemClick(int position) {
         Fragment mFragment=null;
         FragmentManager mFragmentManager = getSupportFragmentManager();
-
         switch (position){
             case 0:
                 mFragment = MenuDashboardActivity.newInstance(mHelpLiveo.get(position).getName());
@@ -131,7 +123,7 @@ public class UserMain extends NavigationLiveo implements OnItemClickListener {
         @Override
         public void onClick(View v) {
             Prefs.clear();
-            move.moveActivity(mContext,ActivityLogin.class);
+            move.moveActivity(mContext, ActivityLogin.class);
         }
     };
 
@@ -139,7 +131,7 @@ public class UserMain extends NavigationLiveo implements OnItemClickListener {
         @Override
         public void onClick(View v) {
             closeDrawer();
-            move.moveActivity(mContext,AdminEditProfile.class);
+            move.moveActivity(mContext, AdminEditProfile.class);
         }
     };
 
@@ -147,3 +139,4 @@ public class UserMain extends NavigationLiveo implements OnItemClickListener {
 
 
 }
+

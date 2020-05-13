@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/red"
     tools:context="com.rental_apps.android.rental_apps.user.SplashActivity">
 
     <LinearLayout
@@ -16,9 +16,10 @@
 
         <ImageView
             android:id="@+id/img"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/green"/>
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/desainmobil2"
+            android:alpha="0.75"/>
         <TextView
             android:id="@+id/logofont"
             android:layout_below="@+id/logo"

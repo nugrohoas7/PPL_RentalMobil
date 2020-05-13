@@ -4,10 +4,9 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
+import com.rental_apps.android.rental_apps.user.MenuDashboardActivity;
 import com.rental_apps.android.rental_apps.R;
-import com.rental_apps.android.rental_apps.user.UserMain;
 
 public class SplashAdminActivity extends AppCompatActivity {
 
@@ -22,7 +21,7 @@ public class SplashAdminActivity extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {
-                    startActivity(new Intent(SplashAdminActivity.this, AdminMain.class));
+                    startActivity(new Intent(SplashAdminActivity.this, MenuDashboardActivity.class));
                     finish();
                 }
             }

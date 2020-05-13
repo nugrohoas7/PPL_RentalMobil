@@ -3,6 +3,7 @@ package com.rental_apps.android.rental_apps;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -88,6 +89,8 @@ public class ActivityRegister extends AppCompatActivity implements InitComponent
         rbl=(RadioButton)findViewById(R.id.jkl);
         rbp=(RadioButton)findViewById(R.id.jkp);
         btnRegister=(Button)findViewById(R.id.btn_register);
+        Typeface custom_fonts2 = Typeface.createFromAsset(getAssets(), "fonts/ArgonPERSONAL-Regular.otf");
+        btnRegister.setTypeface(custom_fonts2);
 
     }
 

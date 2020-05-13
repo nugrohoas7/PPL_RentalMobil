@@ -17,7 +17,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".admin.SplashAdminActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@drawable/cerclebackgroundpurple" />
+
+        <activity android:name=".admin.SplashAdminActivity" />
         <activity
             android:name=".ActivityLogin"
             android:screenOrientation="portrait">
@@ -36,6 +41,14 @@
             android:theme="@style/nLiveoDrawer" />
         <activity
             android:name=".user.UserMain"
+            android:screenOrientation="portrait"
+            android:theme="@style/nLiveoDrawer" />
+        <activity
+            android:name=".user.UserMain2"
+            android:screenOrientation="portrait"
+            android:theme="@style/nLiveoDrawer" />
+        <activity
+            android:name=".user.UserMain3"
             android:screenOrientation="portrait"
             android:theme="@style/nLiveoDrawer" />
         <activity
@@ -81,6 +94,7 @@
             android:label="List Mobil"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
+
         <activity
             android:name=".user.SplashActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />

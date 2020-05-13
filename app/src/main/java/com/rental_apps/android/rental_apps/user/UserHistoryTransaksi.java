@@ -25,6 +25,7 @@ import com.rental_apps.android.rental_apps.api.client;
 import com.rental_apps.android.rental_apps.model.model_history.ResponseHistory;
 import com.rental_apps.android.rental_apps.model.model_history.DataHistory;
 import com.rental_apps.android.rental_apps.myinterface.InitComponent;
+import com.rental_apps.android.rental_apps.utils.move;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,9 +35,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-/**
- * Created by Ujang Wahyu on 15/01/2018.
- */
 
 public class UserHistoryTransaksi extends Fragment implements InitComponent {
     //Declate Toolbar Tittle
