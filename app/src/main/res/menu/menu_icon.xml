@@ -12,7 +12,7 @@
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
-        android:title="Setting"
+        android:title="About Us"
         app:showAsAction="never"
         />
     <item

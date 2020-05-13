@@ -11,10 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.rental_apps.android.rental_apps.AboutActivity;
 import com.rental_apps.android.rental_apps.R;
 import com.rental_apps.android.rental_apps.api.client;
 import com.rental_apps.android.rental_apps.model.model_dashboard.ResponseInfoDashboard;
 import com.rental_apps.android.rental_apps.myinterface.InitComponent;
+import com.rental_apps.android.rental_apps.utils.move;
 
 import customfonts.MyTextView;
 import es.dmoral.toasty.Toasty;
@@ -79,7 +81,10 @@ public class ActivityAdminDashboard extends Fragment implements InitComponent {
                 getDashboard();
                 return true;
             case R.id.add:
-                Toasty.success(mContext, "Tambah", Toast.LENGTH_SHORT).show();
+                move.moveActivity(mContext, ActivityCreateAdmin.class);
+                return true;
+            case R.id.action_settings:
+                move.moveActivity(mContext, AboutActivity.class);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

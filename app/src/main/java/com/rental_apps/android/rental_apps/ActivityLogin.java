@@ -61,7 +61,7 @@ public class ActivityLogin extends AppCompatActivity implements InitComponent, V
     @Override
     public void startInit() {
         if (Prefs.getInt(SPref.getGroupUser(),0)==1){
-            move.moveActivity(mContext,UserMain.class);
+            move.moveActivity(mContext,AdminMain.class);
             finish();
         }
         if (Prefs.getInt(SPref.getGroupUser(),0)==2){
@@ -185,7 +185,7 @@ public class ActivityLogin extends AppCompatActivity implements InitComponent, V
         Prefs.putString(SPref.getNAME(),du.getName());
         Prefs.putString(SPref.getEMAIL(),du.getEmail());
         Prefs.putString(SPref.getNoTelp(),du.getNo_telp());
-        Prefs.putString(SPref.getJenisKelamin(),du.getJenis_kelamin().toString());
+        Prefs.putString(SPref.getGender(),du.getGender().toString());
         Prefs.putString(SPref.getPHOTO(),du.getPhoto());
         Prefs.putString(SPref.getLastUpdate(),du.getLast_update().toString());
         Prefs.putString(SPref.getALAMAT(),du.getAlamat());

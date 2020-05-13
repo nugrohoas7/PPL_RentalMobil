@@ -3,6 +3,7 @@ package com.rental_apps.android.rental_apps.user;
 import android.os.Bundle;
 
 import com.rental_apps.android.rental_apps.R;
+import com.rental_apps.android.rental_apps.admin.AdminMain;
 
 import android.app.Activity;
 import android.content.Intent;

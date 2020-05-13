@@ -17,8 +17,10 @@ import com.pixplicity.easyprefs.library.Prefs;
 import com.rental_apps.android.rental_apps.ActivityLogin;
 import com.rental_apps.android.rental_apps.R;
 import com.rental_apps.android.rental_apps.SPreferenced.SPref;
+import com.rental_apps.android.rental_apps.admin.ActivityDetailUsers;
 import com.rental_apps.android.rental_apps.admin.AdminEditProfile;
 import com.rental_apps.android.rental_apps.admin.AdminListCart;
+import com.rental_apps.android.rental_apps.admin.AdminListUser;
 import com.rental_apps.android.rental_apps.api.client;
 import com.rental_apps.android.rental_apps.myinterface.InitComponent;
 import com.rental_apps.android.rental_apps.utils.move;
@@ -42,13 +44,13 @@ public class UserMain extends NavigationLiveo implements OnItemClickListener {
 
         mContext=this;
         // User Information
-//        adminListUser=new AdminListUser();
+ //      adminListUser=new AdminListUser();
         this.userName.setText(Prefs.getString(SPref.getNAME(),""));
         this.userName.setTextColor(R.color.nliveo_black);
         this.userEmail.setText(Prefs.getString(SPref.getEMAIL(),""));
         this.userEmail.setTextColor(R.color.nliveo_black);
 
-        this.userBackground.setImageResource(R.drawable.drawer_bg);
+        this.userBackground.setImageResource(R.drawable.desainmobil2);
         Picasso.with(mContext)
                 .load(client.getBaseUrlImage()+Prefs.getString(SPref.getPHOTO(),""))
                 .resize(250, 250)
@@ -69,7 +71,7 @@ public class UserMain extends NavigationLiveo implements OnItemClickListener {
                 .colorItemSelected(R.color.white)
                 .backgroundList(R.color.nliveo_black_light)
                 .colorItemIcon(R.color.nliveo_white)
-                .footerItem(getString(R.string.setting), R.drawable.ic_action_settings)
+                .footerItem(getString(R.string.setting), R.drawable.ic_edit_black_24dp)
                 .footerSecondItem(R.string.logout, R.drawable.ic_action_screen_locked_to_portrait)
                 .footerNameColor(R.color.white)
                 .footerIconColor(R.color.nliveo_white)
@@ -139,7 +141,7 @@ public class UserMain extends NavigationLiveo implements OnItemClickListener {
         @Override
         public void onClick(View v) {
             closeDrawer();
-            move.moveActivity(mContext,AdminEditProfile.class);
+            move.moveActivity(mContext, AdminEditProfile.class);
         }
     };
 

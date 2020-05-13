@@ -17,6 +17,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.Toast;
 
 import com.mikepenz.itemanimators.SlideLeftAlphaAnimator;
+import com.rental_apps.android.rental_apps.AboutActivity;
 import com.rental_apps.android.rental_apps.R;
 import com.rental_apps.android.rental_apps.adapter.TransaksiAdapter;
 import com.rental_apps.android.rental_apps.adapter.UsersAdapter;
@@ -26,6 +27,7 @@ import com.rental_apps.android.rental_apps.model.model_transaksi.ResponseTransak
 import com.rental_apps.android.rental_apps.model.model_user.DataUser;
 import com.rental_apps.android.rental_apps.model.model_user.ResponseUser;
 import com.rental_apps.android.rental_apps.myinterface.InitComponent;
+import com.rental_apps.android.rental_apps.utils.move;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -104,6 +106,9 @@ public class AdminListTransaksi extends Fragment implements InitComponent {
                 return true;
             case R.id.add:
                 Toasty.success(mContext, "Tambah", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.action_settings:
+                move.moveActivity(mContext, AboutActivity.class);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

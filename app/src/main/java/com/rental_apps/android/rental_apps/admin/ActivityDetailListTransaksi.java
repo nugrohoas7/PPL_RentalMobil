@@ -14,6 +14,7 @@ package com.rental_apps.android.rental_apps.admin;
         import com.google.gson.Gson;
         import com.mikepenz.itemanimators.SlideLeftAlphaAnimator;
         import com.pixplicity.easyprefs.library.Prefs;
+        import com.rental_apps.android.rental_apps.AboutActivity;
         import com.rental_apps.android.rental_apps.R;
         import com.rental_apps.android.rental_apps.SPreferenced.SPref;
         import com.rental_apps.android.rental_apps.adapter.CarsAdapter;
@@ -126,6 +127,9 @@ public class ActivityDetailListTransaksi extends AppCompatActivity implements In
         switch (item.getItemId()) {
             case android.R.id.home:
                 finish();
+                return true;
+            case R.id.action_settings:
+                move.moveActivity(mContext, AboutActivity.class);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

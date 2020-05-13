@@ -33,7 +33,7 @@ public class DataUser {
 
     @SerializedName("JENIS_KELAMIN")
     @Expose
-    private Character jenis_kelamin;
+    private Character gender;
 
     @SerializedName("ALAMAT")
     @Expose
@@ -115,13 +115,9 @@ public class DataUser {
         this.no_telp = no_telp;
     }
 
-    public Character getJenis_kelamin() {
-        return jenis_kelamin;
-    }
+    public Character getGender() { return gender; }
 
-    public void setJenis_kelamin(Character jenis_kelamin) {
-        this.jenis_kelamin = jenis_kelamin;
-    }
+    public void setGender(Character gender) { this.gender = gender; }
 
     public String getAlamat() {
         return alamat;

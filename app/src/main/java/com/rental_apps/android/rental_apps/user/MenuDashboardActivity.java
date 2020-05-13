@@ -8,6 +8,7 @@ import android.os.Bundle;
 
 import com.google.gson.Gson;
 import com.pixplicity.easyprefs.library.Prefs;
+import com.rental_apps.android.rental_apps.AboutActivity;
 import com.rental_apps.android.rental_apps.ActivityLogin;
 import com.rental_apps.android.rental_apps.PrefsApplication;
 import com.rental_apps.android.rental_apps.R;
@@ -29,6 +30,7 @@ import android.widget.Toast;
 import com.rental_apps.android.rental_apps.SPreferenced.SPref;
 import com.rental_apps.android.rental_apps.adapter.CarsAdapter;
 import com.rental_apps.android.rental_apps.adapter.CarsUserAdapter;
+import com.rental_apps.android.rental_apps.admin.ActivityCreateMobil;
 import com.rental_apps.android.rental_apps.admin.ActivityDetailUsers;
 import com.rental_apps.android.rental_apps.admin.AdminEditProfile;
 import com.rental_apps.android.rental_apps.model.model_user.DataUser;
@@ -36,6 +38,8 @@ import com.rental_apps.android.rental_apps.myinterface.InitComponent;
 import com.rental_apps.android.rental_apps.utils.move;
 
 import java.util.List;
+
+import es.dmoral.toasty.Toasty;
 
 public class MenuDashboardActivity extends Fragment implements InitComponent, View.OnClickListener {
     Context mContext;
@@ -79,6 +83,10 @@ public class MenuDashboardActivity extends Fragment implements InitComponent, Vi
     private void setItem(Menu menu){
         MenuItem menuAdd = menu.findItem(R.id.add);
         menuAdd.setVisible(false);
+        MenuItem menuRefresh = menu.findItem(R.id.refresh);
+        menuRefresh.setVisible(false);
+        MenuItem menuSetting = menu.findItem(R.id.action_settings);
+        menuSetting.setVisible(false);
     }
 
     @Override
@@ -111,8 +119,19 @@ public class MenuDashboardActivity extends Fragment implements InitComponent, Vi
         menu_profil.setOnClickListener(this);
         menu_logout.setOnClickListener(this);
     }
-
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.add:
+                Toasty.success(mContext, "Tambah", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.action_settings:
+                move.moveActivity(mContext, AboutActivity.class);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
     public void onClick (View v){
             switch (v.getId()){
                 case R.id.menu_history:
@@ -122,11 +141,10 @@ public class MenuDashboardActivity extends Fragment implements InitComponent, Vi
                     move.moveActivity(mContext,UserMain3.class);
                     break;
                 case R.id.menu_profil:
-                    move.moveActivity(mContext,AdminEditProfile.class);
+                    move.moveActivity(mContext,ActivityDetailUsers.class);
                     break;
                 case R.id.menu_logout:
-                    Prefs.clear();
-                    move.moveActivity(mContext,ActivityLogin.class);
+                    move.moveActivity(mContext,AdminEditProfile.class);
                     break;
             }
         }

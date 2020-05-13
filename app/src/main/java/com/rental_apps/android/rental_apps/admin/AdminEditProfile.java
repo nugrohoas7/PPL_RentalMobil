@@ -40,7 +40,6 @@ import com.rental_apps.android.rental_apps.model.model_user.DataUser;
 import com.rental_apps.android.rental_apps.model.model_user.ResponseRegister;
 import com.rental_apps.android.rental_apps.myinterface.InitComponent;
 import com.rental_apps.android.rental_apps.utils.validate;
-import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -49,9 +48,7 @@ import java.io.IOException;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import customfonts.MyEditText;
-import customfonts.MyTextView;
 import de.hdodenhof.circleimageview.CircleImageView;
-import es.dmoral.toasty.Toasty;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -66,7 +63,7 @@ public class AdminEditProfile extends AppCompatActivity implements InitComponent
     private MyEditText email;
     private MyEditText noTelp;
     private MyEditText address;
-    private MyEditText jenis_kelamin;
+    private MyEditText gender;
     private MyEditText status;
     private MyEditText username;
     private MyEditText old_password;
@@ -132,7 +129,7 @@ public class AdminEditProfile extends AppCompatActivity implements InitComponent
         email=(MyEditText)findViewById(R.id.email);
         noTelp=(MyEditText)findViewById(R.id.notelp);
         address=(MyEditText)findViewById(R.id.address);
-        jenis_kelamin=(MyEditText)findViewById(R.id.jenis_kelamin);
+        gender=(MyEditText)findViewById(R.id.gender);
         status=(MyEditText)findViewById(R.id.status);
         username=(MyEditText)findViewById(R.id.username);
         old_password=(MyEditText)findViewById(R.id.old_password);
@@ -153,12 +150,8 @@ public class AdminEditProfile extends AppCompatActivity implements InitComponent
         noTelp.setText(Prefs.getString(SPref.getNoTelp(),""));
         address.setText(Prefs.getString(SPref.getALAMAT(),""));
         username.setText(Prefs.getString(SPref.getUSERNAME(),""));
-        JK=Prefs.getString(SPref.getJenisKelamin(),"");
-        if (Prefs.getString(SPref.getJenisKelamin(),"").equals('L')){
-            jenis_kelamin.setText("Laki-laki");
-        }else{
-            jenis_kelamin.setText("Perempuan");
-        }
+       // JK=Prefs.getString(SPref.getGender(),"");
+        gender.setText(Prefs.getString(SPref.getGender(), "").equalsIgnoreCase(String.valueOf('L')) ? "Laki-laki" : "Perempuan");
 
         status.setText("Aktif");
 
@@ -317,7 +310,7 @@ public class AdminEditProfile extends AppCompatActivity implements InitComponent
         Prefs.putString(SPref.getNAME(),du.getName());
         Prefs.putString(SPref.getEMAIL(),du.getEmail());
         Prefs.putString(SPref.getNoTelp(),du.getNo_telp());
-        Prefs.putString(SPref.getJenisKelamin(),du.getJenis_kelamin().toString());
+        Prefs.putString(SPref.getGender(),du.getGender().toString());
         Prefs.putString(SPref.getPHOTO(),du.getPhoto());
         Prefs.putString(SPref.getLastUpdate(),du.getLast_update().toString());
         Prefs.putString(SPref.getALAMAT(),du.getAlamat());

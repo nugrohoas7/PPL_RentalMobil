@@ -58,7 +58,7 @@ public class SPref {
         return NO_TELP;
     }
 
-    public static String getJenisKelamin() {
+    public static String getGender() {
         return JENIS_KELAMIN;
     }
 

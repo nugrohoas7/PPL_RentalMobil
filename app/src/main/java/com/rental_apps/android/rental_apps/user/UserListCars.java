@@ -19,12 +19,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mikepenz.itemanimators.SlideLeftAlphaAnimator;
+import com.rental_apps.android.rental_apps.AboutActivity;
 import com.rental_apps.android.rental_apps.R;
 import com.rental_apps.android.rental_apps.SPreferenced.SPref;
 import com.rental_apps.android.rental_apps.adapter.CarsAdapter;
 import com.rental_apps.android.rental_apps.adapter.CarsUserAdapter;
 import com.rental_apps.android.rental_apps.adapter.Carts;
 import com.rental_apps.android.rental_apps.admin.ActivityCreateMobil;
+import com.rental_apps.android.rental_apps.admin.AdminEditProfile;
 import com.rental_apps.android.rental_apps.api.client;
 import com.rental_apps.android.rental_apps.helper.DrawableCounter;
 import com.rental_apps.android.rental_apps.model.model_mobil.DataCars;
@@ -115,6 +117,8 @@ public class UserListCars extends Fragment implements InitComponent{
         badge.setCount(""+Carts.getSize(SPref.getCARTS()));
         icon.mutate();
         icon.setDrawableByLayerId(R.id.ic_group_count, badge);
+        MenuItem menuAdd = menu.findItem(R.id.add);
+        menuAdd.setVisible(false);
     }
 
 
@@ -129,6 +133,9 @@ public class UserListCars extends Fragment implements InitComponent{
                 return true;
             case R.id.cart:
                 move.moveActivity(mContext,ActivityListTransaksi.class);
+                return true;
+            case R.id.action_settings:
+                move.moveActivity(mContext, AboutActivity.class);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

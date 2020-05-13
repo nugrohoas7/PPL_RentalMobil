@@ -17,9 +17,11 @@ import android.widget.Toast;
 
 import com.mikepenz.itemanimators.SlideLeftAlphaAnimator;
 import com.pixplicity.easyprefs.library.Prefs;
+import com.rental_apps.android.rental_apps.AboutActivity;
 import com.rental_apps.android.rental_apps.R;
 import com.rental_apps.android.rental_apps.SPreferenced.SPref;
 import com.rental_apps.android.rental_apps.adapter.HistoryAdapter;
+import com.rental_apps.android.rental_apps.admin.AdminEditProfile;
 import com.rental_apps.android.rental_apps.user.UserHistoryTransaksi;
 import com.rental_apps.android.rental_apps.api.client;
 import com.rental_apps.android.rental_apps.model.model_history.ResponseHistory;
@@ -108,6 +110,9 @@ public class UserHistoryTransaksi extends Fragment implements InitComponent {
                 return true;
             case R.id.add:
                 Toasty.success(mContext, "Tambah", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.action_settings:
+                move.moveActivity(mContext, AboutActivity.class);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

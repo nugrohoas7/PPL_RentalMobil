@@ -16,9 +16,16 @@
         android:icon="@drawable/ic_refresh"
         />
     <item
+        android:id="@+id/add"
+        android:orderInCategory="100"
+        android:title="add"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_new"
+        />
+    <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
-        android:title="Setting"
+        android:title="About Us"
         app:showAsAction="never"
         />
 

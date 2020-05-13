@@ -39,7 +39,7 @@ public class UserMain3 extends NavigationLiveo implements OnItemClickListener {
         this.userEmail.setText(Prefs.getString(SPref.getEMAIL(),""));
         this.userEmail.setTextColor(R.color.nliveo_black);
 
-        this.userBackground.setImageResource(R.drawable.drawer_bg);
+        this.userBackground.setImageResource(R.drawable.desainmobil2);
         Picasso.with(mContext)
                 .load(client.getBaseUrlImage()+Prefs.getString(SPref.getPHOTO(),""))
                 .resize(250, 250)
@@ -60,7 +60,7 @@ public class UserMain3 extends NavigationLiveo implements OnItemClickListener {
                 .colorItemSelected(R.color.white)
                 .backgroundList(R.color.nliveo_black_light)
                 .colorItemIcon(R.color.nliveo_white)
-                .footerItem(getString(R.string.setting), R.drawable.ic_action_settings)
+                .footerItem(getString(R.string.setting), R.drawable.ic_edit_black_24dp)
                 .footerSecondItem(R.string.logout, R.drawable.ic_action_screen_locked_to_portrait)
                 .footerNameColor(R.color.white)
                 .footerIconColor(R.color.nliveo_white)
