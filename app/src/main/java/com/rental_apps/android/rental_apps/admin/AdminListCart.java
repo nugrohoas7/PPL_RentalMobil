@@ -6,6 +6,7 @@ import android.graphics.drawable.LayerDrawable;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -47,6 +48,7 @@ public class AdminListCart extends Fragment implements InitComponent {
     //Declare Component View
     private TextView mTxtTitle;
     private View rootView;
+    private RecyclerView.LayoutManager mLayoutManager;
     private RecyclerView recyclerCars;
     //Declate Activity Context
     Context mContext;
@@ -181,9 +183,10 @@ public class AdminListCart extends Fragment implements InitComponent {
     }
 
     private void prepareCars(){
+        mLayoutManager = new GridLayoutManager(mContext,2);
+        recyclerCars.setLayoutManager(mLayoutManager);
         mAdapter = new CarsAdapter(listCars);
         recyclerCars.setHasFixedSize(true);
-        recyclerCars.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerCars.setItemAnimator(new DefaultItemAnimator());
         recyclerCars.setAdapter(mAdapter);
         recyclerCars.setItemAnimator(new SlideLeftAlphaAnimator());

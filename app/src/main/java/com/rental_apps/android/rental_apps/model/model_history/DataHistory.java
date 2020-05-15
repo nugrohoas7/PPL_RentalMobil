@@ -68,7 +68,7 @@ public class DataHistory {
         this.iDUSER = iDUSER;
         this.tGLORDER = tGLORDER;
         this.tGLSEWA = tGLSEWA;
-        this.tGLORDER = tGLPENGEMBALIAN;
+        this.tGLPENGEMBALIAN = tGLPENGEMBALIAN;
         this.tOTALPEMBAYARAN = tOTALPEMBAYARAN;
         this.tGLPEMBAYARAN = tGLPEMBAYARAN;
         this.bUKTIPEMBAYARAN = bUKTIPEMBAYARAN;

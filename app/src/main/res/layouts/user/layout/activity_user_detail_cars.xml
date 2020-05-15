@@ -458,14 +458,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-            <EditText
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alamat"/>
+                <TextView
                 android:id="@+id/almt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Alamat"
                 android:textColor="@color/nliveo_black"
                 android:textColorHint="@color/nliveo_black"
-                android:background="@drawable/roundwhite"
+                android:background="@drawable/border"
                 android:padding="15dp"
                 android:layout_marginBottom="5dp"
                 />

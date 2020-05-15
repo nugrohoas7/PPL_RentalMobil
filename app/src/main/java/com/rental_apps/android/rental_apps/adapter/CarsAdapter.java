@@ -56,16 +56,10 @@ public class CarsAdapter extends RecyclerView.Adapter<CarsAdapter.MyViewHolder>{
             super(view);
             mView=view;
             carName = (TextView) view.findViewById(R.id.carName);
-            year = (TextView) view.findViewById(R.id.year);
-            capacity = (TextView) view.findViewById(R.id.capacity);
-            color=(TextView)view.findViewById(R.id.color);
+
             bensin=(TextView)view.findViewById(R.id.bensin);
             price=(TextView)view.findViewById(R.id.price);
             status=(TextView)view.findViewById(R.id.status);
-            ic_year=(ImageView)view.findViewById(R.id.ic_year);
-            ic_color=(ImageView)view.findViewById(R.id.ic_color);
-            ic_capacity=(ImageView)view.findViewById(R.id.ic_capacity);
-            ic_bensin=(ImageView)view.findViewById(R.id.ic_bensin);
             imgCar=(ImageView)view.findViewById(R.id.imgCar);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -82,10 +76,6 @@ public class CarsAdapter extends RecyclerView.Adapter<CarsAdapter.MyViewHolder>{
 
         public void bindItem(DataCars cars) {
             carName.setText(cars.getNAMAMOBIL().toString());
-            year.setText(cars.getTAHUNMOBIL().toString());
-            capacity.setText(cars.getKAPASITASMOBIL().toString());
-            color.setText(cars.getWARNAMOBIL().toString());
-            bensin.setText(cars.getBENSINMOBIL().toString());
             price.setText("Rp. "+String.format("%,.2f", Double.parseDouble(cars.getHARGAMOBIL().toString())));
 
             if (Integer.parseInt(cars.getSTATUSSEWA().toString())==1){
@@ -98,17 +88,6 @@ public class CarsAdapter extends RecyclerView.Adapter<CarsAdapter.MyViewHolder>{
             if (cars.getIMAGE().size()>0)
                 Picasso.with(view.getContext()).load(client.getBaseImg()+"mobil/"+cars.getIMAGE().get(0)).into(imgCar);
 
-
-
-            Drawable yearIcon= ContextCompat.getDrawable(view.getContext(), R.drawable.ic_action_go_to_today);
-            Drawable capacityIcon= ContextCompat.getDrawable(view.getContext(), R.drawable.ic_action_cc_bcc);
-            Drawable colorIcon= ContextCompat.getDrawable(view.getContext(), R.drawable.ic_action_picture);
-            Drawable fuelIcon= ContextCompat.getDrawable(view.getContext(), R.drawable.ic_action_fuel);
-
-            ic_year.setImageDrawable(DrawableColor.setColor(yearIcon,R.color.nliveo_orange_colorPrimaryDark));
-            ic_capacity.setImageDrawable(DrawableColor.setColor(capacityIcon,R.color.nliveo_orange_colorPrimaryDark));
-            ic_color.setImageDrawable(DrawableColor.setColor(colorIcon,R.color.nliveo_orange_colorPrimaryDark));
-            ic_bensin.setImageDrawable(DrawableColor.setColor(fuelIcon,R.color.nliveo_orange_colorPrimaryDark));
         }
 
 

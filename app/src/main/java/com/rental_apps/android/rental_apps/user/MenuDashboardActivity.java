@@ -26,6 +26,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import com.rental_apps.android.rental_apps.SPreferenced.SPref;
 import com.rental_apps.android.rental_apps.adapter.CarsAdapter;
@@ -48,6 +49,7 @@ public class MenuDashboardActivity extends Fragment implements InitComponent, Vi
     private ImageView menu_profil;
     private ImageView menu_logout;
     private View rootView;
+    ViewFlipper v_flipper;
     private static final String TEXT_FRAGMENT = "RENTCAR";
 
     public static MenuDashboardActivity newInstance(String text){
@@ -105,6 +107,15 @@ public class MenuDashboardActivity extends Fragment implements InitComponent, Vi
             menu_history = (ImageView)rootView.findViewById(R.id.menu_history);
             menu_profil = (ImageView)rootView.findViewById(R.id.menu_profil);
             menu_logout = (ImageView)rootView.findViewById(R.id.menu_logout);
+        int images[] = {R.drawable.background2,
+                R.drawable.background3, R.drawable.bg_drawer
+                , R.drawable.bg};
+        v_flipper = (ViewFlipper) rootView.findViewById(R.id.v_flipper);
+        for (int i = 0; i < images.length; i++) {
+            fliverImages(images[i]);
+        }
+        for (int image : images)
+            fliverImages(image);
         }
 
     @Override
@@ -131,6 +142,16 @@ public class MenuDashboardActivity extends Fragment implements InitComponent, Vi
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+    public void fliverImages(int images) {
+        ImageView imageView = new ImageView(mContext);
+        imageView.setBackgroundResource(images);
+        v_flipper.addView(imageView);
+        v_flipper.setFlipInterval(4000);
+        v_flipper.setAutoStart(true);
+
+        v_flipper.setInAnimation(mContext, android.R.anim.slide_in_left);
+        v_flipper.setOutAnimation(mContext, android.R.anim.slide_out_right);
     }
     public void onClick (View v){
             switch (v.getId()){

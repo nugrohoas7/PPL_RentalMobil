@@ -39,9 +39,11 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
     public class MyViewHolder extends RecyclerView.ViewHolder {
         private View view;
         private TextView almt;
+        private TextView name;
+        private TextView telepon;
         private TextView kode_transaksi;
-        private TextView tanggal_ambil;
-        private TextView tanggal_kembali;
+        private TextView tglambil;
+        private TextView tglkembali;
         private TextView status;
         private TextView total_transaksi;
         private LinearLayout bg_transaksi;
@@ -49,10 +51,12 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
             super(view);
             mView=view;
             kode_transaksi=(TextView) view.findViewById(R.id.kode_transaksi);
-            tanggal_ambil=(TextView) view.findViewById(R.id.tanggal_ambil);
-            tanggal_kembali=(TextView) view.findViewById(R.id.tanggal_kembali);
+            tglambil=(TextView) view.findViewById(R.id.tglambil);
+            tglkembali=(TextView) view.findViewById(R.id.tglkembali);
             status=(TextView) view.findViewById(R.id.status);
             almt=(TextView)view.findViewById(R.id.almt);
+            name=(TextView)view.findViewById(R.id.name);
+            telepon=(TextView)view.findViewById(R.id.telepon);
             total_transaksi=(TextView)view.findViewById(R.id.total_transaksi);
             bg_transaksi=(LinearLayout) view.findViewById(R.id.bg_transaksi);
             this.view=view;
@@ -71,9 +75,11 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
 
         public void bindItem(DataHistory transaksi) {
             kode_transaksi.setText(transaksi.getKODETRANSAKSI());
-            tanggal_ambil.setText(transaksi.getTGLSEWA());
+            tglambil.setText(transaksi.getTGLORDER());
             almt.setText(Prefs.getString(SPref.getALAMAT(),""));
-            tanggal_kembali.setText(transaksi.getTGLPENGEMBALIAN());
+            name.setText(Prefs.getString(SPref.getNAME(),""));
+            telepon.setText(Prefs.getString(SPref.getNoTelp(),""));
+            tglkembali.setText(transaksi.getTGLPEMBAYARAN());
             if(transaksi.getSTATUSPEMBAYARAN()=="1")
                 status.setText("Lunas");
             else status.setText("Belum Lunas");
@@ -81,10 +87,10 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
             total_transaksi.setText("Rp. "+String.format("%,.2f", Double.parseDouble(transaksi.getTOTALPEMBAYARAN().toString())));
 
             if (transaksi.getSTATUSPEMBAYARAN().equals("0")){
-                bg_transaksi.setBackgroundColor(Color.parseColor("#da4749"));
+                bg_transaksi.setBackgroundColor(Color.parseColor("#FF9800"));
                 status.setText("Belum Lunas");
             }else{
-                bg_transaksi.setBackgroundColor(Color.parseColor("#29A9E1"));
+                bg_transaksi.setBackgroundColor(Color.parseColor("#4CAF50"));
                 status.setText("Lunas");
             }
         }

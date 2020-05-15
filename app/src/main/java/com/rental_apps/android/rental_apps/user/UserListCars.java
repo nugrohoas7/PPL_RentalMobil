@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,8 +16,12 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridLayout;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import com.mikepenz.itemanimators.SlideLeftAlphaAnimator;
 import com.rental_apps.android.rental_apps.AboutActivity;
@@ -55,14 +60,15 @@ public class UserListCars extends Fragment implements InitComponent{
     //Declare Component View
     private TextView mTxtTitle;
     private View rootView;
+    private RecyclerView.LayoutManager mLayoutManager;
     private RecyclerView recyclerCars;
+    ViewFlipper v_flipper;
     //Declate Activity Context
     Context mContext;
 
     //Declare Object Cars
     ResponseCars dataCars;
     List<DataCars> listCars=new ArrayList<>();
-
     Menu mnn;
 
     //Declare Adapter
@@ -141,7 +147,16 @@ public class UserListCars extends Fragment implements InitComponent{
                 return super.onOptionsItemSelected(item);
         }
     }
+    public void fliverImages(int images) {
+        ImageView imageView = new ImageView(mContext);
+        imageView.setBackgroundResource(images);
+        v_flipper.addView(imageView);
+        v_flipper.setFlipInterval(4000);
+        v_flipper.setAutoStart(true);
 
+        v_flipper.setInAnimation(mContext, android.R.anim.slide_in_left);
+        v_flipper.setOutAnimation(mContext, android.R.anim.slide_out_right);
+    }
     @Override
     public void startInit() {
         initToolbar();
@@ -159,9 +174,17 @@ public class UserListCars extends Fragment implements InitComponent{
     public void initUI() {
         rootView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT ));
         recyclerCars = (RecyclerView)rootView.findViewById(R.id.rCarList);
-
-
+        int images[] = {R.drawable.background2,
+                R.drawable.background3, R.drawable.bg_drawer
+                , R.drawable.bg};
+        v_flipper = (ViewFlipper) rootView.findViewById(R.id.v_flipper);
+        for (int i = 0; i < images.length; i++) {
+            fliverImages(images[i]);
+        }
+        for (int image : images)
+            fliverImages(image);
     }
+
 
     @Override
     public void initValue() {
@@ -201,9 +224,10 @@ public class UserListCars extends Fragment implements InitComponent{
     }
 
     private void prepareCars(){
+        mLayoutManager = new GridLayoutManager(mContext,2);
+        recyclerCars.setLayoutManager(mLayoutManager);
         mAdapter = new CarsUserAdapter(listCars);
         recyclerCars.setHasFixedSize(true);
-        recyclerCars.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerCars.setItemAnimator(new DefaultItemAnimator());
         recyclerCars.setAdapter(mAdapter);
         recyclerCars.setItemAnimator(new SlideLeftAlphaAnimator());
