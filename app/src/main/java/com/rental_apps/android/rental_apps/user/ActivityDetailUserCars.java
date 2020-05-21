@@ -295,6 +295,8 @@ public class ActivityDetailUserCars extends AppCompatActivity implements InitCom
         badge.setCount(""+Carts.getSize(SPref.getCARTS()));
         icon.mutate();
         icon.setDrawableByLayerId(R.id.ic_group_count, badge);
+        MenuItem menuAdd = menu.findItem(R.id.add);
+        menuAdd.setVisible(false);
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

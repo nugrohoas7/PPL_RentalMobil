@@ -174,9 +174,9 @@ public class UserListCars extends Fragment implements InitComponent{
     public void initUI() {
         rootView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT ));
         recyclerCars = (RecyclerView)rootView.findViewById(R.id.rCarList);
-        int images[] = {R.drawable.background2,
-                R.drawable.background3, R.drawable.bg_drawer
-                , R.drawable.bg};
+        int images[] = {R.drawable.promo1,
+                R.drawable.promo2, R.drawable.promo3
+                , R.drawable.desainmobil};
         v_flipper = (ViewFlipper) rootView.findViewById(R.id.v_flipper);
         for (int i = 0; i < images.length; i++) {
             fliverImages(images[i]);

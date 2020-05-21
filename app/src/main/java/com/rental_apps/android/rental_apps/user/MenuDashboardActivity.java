@@ -107,9 +107,9 @@ public class MenuDashboardActivity extends Fragment implements InitComponent, Vi
             menu_history = (ImageView)rootView.findViewById(R.id.menu_history);
             menu_profil = (ImageView)rootView.findViewById(R.id.menu_profil);
             menu_logout = (ImageView)rootView.findViewById(R.id.menu_logout);
-        int images[] = {R.drawable.background2,
-                R.drawable.background3, R.drawable.bg_drawer
-                , R.drawable.bg};
+        int images[] = {R.drawable.promo1,
+                R.drawable.promo2, R.drawable.promo3
+                , R.drawable.desainmobil};
         v_flipper = (ViewFlipper) rootView.findViewById(R.id.v_flipper);
         for (int i = 0; i < images.length; i++) {
             fliverImages(images[i]);

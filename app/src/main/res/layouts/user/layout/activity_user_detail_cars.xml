@@ -430,7 +430,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
+                <TextView
+                    android:id="@+id/tv_timeresult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:elevation="3dp"
+                    android:gravity="center"
+                    android:text="Jam dipilih : " />
                 <Button
                     android:id="@+id/bt_showtimepicker"
                     android:layout_width="wrap_content"
@@ -444,15 +452,7 @@
                     android:text="Pilih Jam Sewa"
                     android:textColor="@color/White" />
 
-                <TextView
-                    android:id="@+id/tv_timeresult"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:elevation="3dp"
-                    android:gravity="center"
-                    android:text="Jam dipilih : " />
+
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -716,7 +716,7 @@
                 android:paddingLeft="90dp"
                 android:paddingRight="90dp"
                 android:paddingTop="12dp"
-                android:text="ADD TO CART"
+                android:text="TAMBAH KE KERANJANG"
                 android:textColor="@color/White"
                 android:textSize="15sp"
                 android:layout_marginBottom="30sp"
