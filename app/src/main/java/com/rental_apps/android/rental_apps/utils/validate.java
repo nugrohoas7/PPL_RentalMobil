@@ -6,9 +6,7 @@ import android.widget.EditText;
 
 import com.rental_apps.android.rental_apps.helper.DatePickerView;
 
-/**
- * Created by Ujang Wahyu on 04/01/2018.
- */
+
 public class validate {
 
     public static boolean cek(EditText et) {

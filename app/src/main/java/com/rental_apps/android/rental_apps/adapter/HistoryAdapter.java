@@ -27,9 +27,7 @@ import java.util.List;
 
 import customfonts.MyTextView;
 
-/**
- * Created by USER on 28/01/2018.
- */
+
 
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHolder>{
     private List<DataHistory> historyList;

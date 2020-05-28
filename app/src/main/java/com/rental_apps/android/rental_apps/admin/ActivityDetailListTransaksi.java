@@ -44,9 +44,7 @@ package com.rental_apps.android.rental_apps.admin;
         import retrofit2.Callback;
         import retrofit2.Response;
 
-/**
- * Created by Ujang Wahyu on 04/01/2018.
- */
+
 
 public class ActivityDetailListTransaksi extends AppCompatActivity implements InitComponent, View.OnClickListener {
     private MyTextView confirm;

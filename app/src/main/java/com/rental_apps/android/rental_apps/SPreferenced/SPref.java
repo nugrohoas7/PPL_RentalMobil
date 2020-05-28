@@ -1,8 +1,6 @@
 package com.rental_apps.android.rental_apps.SPreferenced;
 
-/**
- * Created by Ujang Wahyu on 04/01/2018.
- */
+
 
 public class SPref {
     private static String ID_USER="ID_USER";

@@ -37,9 +37,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-/**
- * Created by Ujang Wahyu on 04/01/2018.
- */
+
 
 public class ActivityListTransaksi extends AppCompatActivity implements InitComponent, View.OnClickListener {
     private MyTextView checkout;

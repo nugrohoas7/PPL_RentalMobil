@@ -21,9 +21,7 @@ import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
-/**
- * Created by Ujang Wahyu on 04/01/2018.
- */
+
 
 public interface request{
     @FormUrlEncoded

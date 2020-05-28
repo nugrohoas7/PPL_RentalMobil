@@ -3,9 +3,7 @@ package com.rental_apps.android.rental_apps.model.fasilitas;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by Ujang Wahyu on 02/02/2018.
- */
+
 
 public class DataFasilitas {
     @SerializedName("ID_FASILITAS")

@@ -6,9 +6,7 @@ import com.rental_apps.android.rental_apps.model.model_detail_transaksi.DataDeta
 
 import java.util.List;
 
-/**
- * Created by USER on 28/01/2018.
- */
+
 
 public class ResponseDetailHistory {
 

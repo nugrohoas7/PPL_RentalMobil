@@ -29,9 +29,7 @@ import java.util.List;
 
 import es.dmoral.toasty.Toasty;
 
-/**
- * Created by Ujang Wahyu on 04/01/2018.
- */
+
 
 public class CarsUserAdapter extends RecyclerView.Adapter<CarsUserAdapter.MyViewHolder>{
     private List<DataCars> carsList;

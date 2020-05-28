@@ -49,9 +49,7 @@ import customfonts.MyEditText;
 import customfonts.MyTextView;
 import es.dmoral.toasty.Toasty;
 
-/**
- * Created by Ujang Wahyu on 04/01/2018.
- */
+
 
 public class ActivityDetailUserCars extends AppCompatActivity implements InitComponent, View.OnClickListener{
     private Context mContext;

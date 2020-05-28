@@ -13,9 +13,7 @@ import java.util.ArrayList;
 
 import es.dmoral.toasty.Toasty;
 
-/**
- * Created by Ujang Wahyu on 04/01/2018.
- */
+
 
 public class Carts {
 

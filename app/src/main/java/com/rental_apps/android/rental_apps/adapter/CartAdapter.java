@@ -29,9 +29,7 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 import customfonts.MyTextView;
 import es.dmoral.toasty.Toasty;
 
-/**
- * Created by Ujang Wahyu on 04/01/2018.
- */
+
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyViewHolder>{
     private List<DataCarts> cartList;

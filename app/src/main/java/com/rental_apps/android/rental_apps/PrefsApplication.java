@@ -5,9 +5,7 @@ import android.content.ContextWrapper;
 
 import com.pixplicity.easyprefs.library.Prefs;
 
-/**
- * Created by Ujang Wahyu on 04/01/2018.
- */
+
 
 public class PrefsApplication extends Application {
     @Override

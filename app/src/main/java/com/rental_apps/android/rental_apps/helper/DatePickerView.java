@@ -1,9 +1,7 @@
 package com.rental_apps.android.rental_apps.helper;
 
 
-/**
- * Created by Muhajir on 20/03/2017.
- */
+
 
 
         import android.app.DatePickerDialog;
